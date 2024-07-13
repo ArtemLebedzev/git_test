@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        
+        Class1 person1 = new Class1("Artem", 20);
+        person1.toDisplay();
     }
 }
 
@@ -50,6 +51,6 @@ class Class1{
     }
 
     void toDisplay(){
-        System.out.println(name + " " + age);
+        System.out.println(name + "," + age);
     }
 }
