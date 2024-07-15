@@ -1,56 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        Class1 person1 = new Class1("Artem", 20);
-        person1.toDisplay();
+        Student person0 = new Student("Anton", 19, 112222);
+        Person person1 = new Student("Artem", 20, 112233);
+        Info info = new Student("Avgust", 22, 112244);
+
+        System.out.println(person0.toString());
+        System.out.println(person1.toString());
+        System.out.println(info.toString());
+
+        person0.showInfo();
+        person1.showInfo();
+        info.showInfo();
+
+        showInfoByMethod(info);
+        showInfoByMethod(person0);
+    }
+
+    public static void showInfoByMethod(Info info){
+        System.out.print("By method: ");
+        info.showInfo();
     }
 }
 
-class Class1{
-    private String name;
-    private int age;
-    private static int countPeople;
-    public static final int CONSTANT = 0;
-
-    {
-        name = "Default";
-        age = 0;
-    }
-
-    public Class1() {
-        countPeople++;
-    }
-
-    public Class1(String name, int age){
-        this.name = name;
-        this.age = age;
-        countPeople++;
-    }
-
-    public void SetName(String name){
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public static void setCountPeople(int countPeople){
-        Class1.countPeople = countPeople;
-    }
-
-    public static int getCountPeople(){
-        return countPeople;
-    }
-
-    void toDisplay(){
-        System.out.println(name + "," + age);
-    }
-}
